@@ -1,0 +1,57 @@
+Câu 1: Thành phần nào sau đây KHÔNG phải là một thành phần giao diện người dùng (UI) trong Android?
+A. TextView
+B. Button
+C. Service
+D. ImageView
+ANSWER: C
+
+Câu 2: Layout nào thường được sử dụng để sắp xếp các thành phần UI theo chiều dọc hoặc chiều ngang?
+A. RelativeLayout
+B. LinearLayout
+C. FrameLayout
+D. ConstraintLayout
+ANSWER: B
+
+Câu 3: Intent trong Android được sử dụng để làm gì?
+A. Hiển thị thông báo cho người dùng.
+B. Lưu trữ dữ liệu.
+C. Khởi chạy Activity.
+D. Xử lý sự kiện chạm.
+ANSWER: C
+
+Câu 4: Vòng đời của một Activity bắt đầu bằng phương thức nào?
+A. onStart()
+B. onResume()
+ANSWER: A
+
+Câu 5: Trứng có trước hay gà có trước?
+A. Gà 
+B. Trứng 
+ANSWER: A
+
+Câu 6: Vừa bằng hạt đỗ, ăn giỗ cả làng. Là con gì?
+A. Con muỗi
+B. Con Ruồi
+C. Con Gián
+ANSWER: B
+
+Câu 7: Trên đỉnh cây Noel, người ta thường hay treo thứ gì nhiều nhất nhỉ?
+A. Quả bóng
+B. Cái chuông
+C. Ngôi sao
+D. Con chim
+ANSWER: C
+
+Câu 8: Món quà ông già Noel thường để ở đâu?
+A. Trong xe tuần lộc
+B. Trong chiếc tất
+C. Trong cái nón hình cũ carot
+D. Trong áo
+ANSWER: B
+
+Câu 9: Who is the best player in the world?
+A. Cristiano Ronaldo
+B. Lionel Messi 
+C. Pelé
+D. Mardadona
+ANSWER: A
