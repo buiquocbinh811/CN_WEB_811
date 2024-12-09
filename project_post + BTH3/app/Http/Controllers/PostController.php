@@ -7,9 +7,6 @@ use Illuminate\Http\Request;
 
 class PostController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
         // Lấy tất cả các bài viết từ cơ sở dữ liệu
@@ -20,18 +17,12 @@ class PostController extends Controller
         return view('home', compact('posts'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     */
     public function create()
     {
         // Trả về view tạo bài viết mới
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     */
     public function store(Request $request)
     {
         // Validate dữ liệu đầu vào
@@ -50,9 +41,7 @@ class PostController extends Controller
         return redirect()->route('posts.index')->with('success', 'Post created successfully.');
     }
 
-    /**
-     * Display the specified resource.
-     */
+
     public function show(string $id)
     {
         // Tìm bài viết theo ID
