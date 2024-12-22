@@ -33,6 +33,7 @@
                 <thead>
                     <tr>
                         <th>#</th>
+                        <th>Image</th>
                         <th>Channel Name</th>
                         <th>Description</th>
                         <th>Subscribers Count</th>
@@ -44,6 +45,14 @@
                     @foreach ($channels as $channel)
                         <tr>
                             <td class="fw-bold">{{ $channel->ChannelID }}</td>
+                            <td>  
+                                @if($channel->image)
+                                    <img src="{{ asset('storage/' . $channel->image) }}" 
+                                         width="50" 
+                                         height="50" 
+                                         class="rounded">
+                                @endif
+                            </td>
                             <td>{{ $channel->ChannelName }}</td>
                             <td>{{ $channel->Description }}</td>
                             <td>{{ $channel->SubscribersCount }}</td>

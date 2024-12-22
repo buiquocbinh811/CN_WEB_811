@@ -26,6 +26,10 @@ class ChannelController extends Controller
         $channel->Description = $request->Description;
         $channel->SubscribersCount = $request->SubscribersCount;
         $channel->URL = $request->URL;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('channels', 'public');
+            $channel->image = $path;
+        }
         $channel->save();
 
         return redirect()->route('channels.index')->with('success', 'Channel created successfully');
@@ -44,6 +48,10 @@ class ChannelController extends Controller
         $channel->Description = $request->Description;
         $channel->SubscribersCount = $request->SubscribersCount;
         $channel->URL = $request->URL;
+        if ($request->hasFile('image')) {
+            $path = $request->file('image')->store('channels', 'public');
+            $channel->image = $path;
+        }
         $channel->save();
 
         return redirect()->route('channels.index')->with('success', 'Channel updated successfully');

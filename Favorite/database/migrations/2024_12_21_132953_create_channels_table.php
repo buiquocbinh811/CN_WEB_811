@@ -17,6 +17,7 @@ return new class extends Migration
             $table->text('Description')->nullable(); 
             $table->integer('SubscribersCount')->default(0); 
             $table->string('URL'); 
+            $table->string('image')->nullable(); // Make sure it ẽists
             $table->timestamps(); 
         });
     }

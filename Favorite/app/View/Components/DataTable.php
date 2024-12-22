@@ -1,25 +1,20 @@
 <?php
-
 namespace App\View\Components;
 
-use Closure;
-use Illuminate\Contracts\View\View;
 use Illuminate\View\Component;
 
 class DataTable extends Component
 {
-    /**
-     * Create a new component instance.
-     */
-    public function __construct()
+    public $config;
+    public $items;
+    
+    public function __construct($table, $items)
     {
-        //
+        $this->config = config("table-config.$table");
+        $this->items = $items;
     }
 
-    /**
-     * Get the view / contents that represent the component.
-     */
-    public function render(): View|Closure|string
+    public function render()
     {
         return view('components.data-table');
     }

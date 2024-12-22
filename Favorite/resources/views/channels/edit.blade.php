@@ -11,7 +11,7 @@
 <body>
     <div class="container">
         <h1>Edit Channel</h1>
-        <form action="{{ route('channels.update', $channel->ChannelID) }}" method="POST">
+        <form action="{{ route('channels.update', $channel->ChannelID) }}" method="POST" enctype="multipart/form-data" class="mt-4">
             @csrf
             @method('PUT')
             <x-form-input 
@@ -42,6 +42,13 @@
                 :value="$channel->URL" 
                 required="true" 
             />
+            <x-form-input 
+                type="file" 
+                name="image" 
+                label="Channel Image" 
+                :value="$channel->image ?? ''" 
+                required="false"
+                />
             <button type="submit" class="btn btn-primary">Update Channel</button>
             <a href="{{ route('channels.index') }}" class="btn btn-secondary">Cancel</a>
         </form>

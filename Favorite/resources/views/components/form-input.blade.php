@@ -6,6 +6,16 @@
                 name="{{ $name }}" 
                 rows="3"
                 {{ $required ? 'required' : '' }}>{{ $value }}</textarea>
+    @elseif($type === 'file')
+        <input type="file" 
+               class="form-control" 
+               id="{{ $name }}" 
+               name="{{ $name }}"
+               accept="image/*"
+               {{ $required ? 'required' : '' }}>
+        @if($value)
+            <img src="{{ asset('storage/' . $value) }}" width="100" class="mt-2">
+        @endif
     @else
         <input type="{{ $type }}" 
                class="form-control" 
