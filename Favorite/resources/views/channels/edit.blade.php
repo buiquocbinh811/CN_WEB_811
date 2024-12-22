@@ -14,22 +14,34 @@
         <form action="{{ route('channels.update', $channel->ChannelID) }}" method="POST">
             @csrf
             @method('PUT')
-            <div class="mb-3">
-                <label for="ChannelName" class="form-label">Channel Name</label>
-                <input type="text" class="form-control" id="ChannelName" name="ChannelName" value="{{ $channel->ChannelName }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="Description" class="form-label">Description</label>
-                <textarea class="form-control" id="Description" name="Description" rows="3" required>{{ $channel->Description }}</textarea>
-            </div>
-            <div class="mb-3">
-                <label for="SubscribersCount" class="form-label">Subscribers Count</label>
-                <input type="number" class="form-control" id="SubscribersCount" name="SubscribersCount" value="{{ $channel->SubscribersCount }}" required>
-            </div>
-            <div class="mb-3">
-                <label for="URL" class="form-label">URL</label>
-                <input type="url" class="form-control" id="URL" name="URL" value="{{ $channel->URL }}" required>
-            </div>
+            <x-form-input 
+                type="text" 
+                name="ChannelName" 
+                label="Channel Name" 
+                :value="$channel->ChannelName" 
+                required="true" 
+            />
+            <x-form-input 
+                type="textarea" 
+                name="Description" 
+                label="Description" 
+                :value="$channel->Description" 
+                required="true" 
+            />
+            <x-form-input 
+                type="number" 
+                name="SubscribersCount" 
+                label="Subscribers Count" 
+                :value="$channel->SubscribersCount" 
+                required="true" 
+            />
+            <x-form-input 
+                type="url" 
+                name="URL" 
+                label="URL" 
+                :value="$channel->URL" 
+                required="true" 
+            />
             <button type="submit" class="btn btn-primary">Update Channel</button>
             <a href="{{ route('channels.index') }}" class="btn btn-secondary">Cancel</a>
         </form>

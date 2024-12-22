@@ -13,23 +13,35 @@
         <h1 class="mt-5">Add new Channel</h1>
         <form action="{{ route('channels.store') }}" method="POST" class="mt-4">
             @csrf
-            <div class="mb-3">
-                <label for="ChannelName" class="form-label">Channel Name</label>
-                <input type="text" class="form-control" id="ChannelName" name="ChannelName" required>
-            </div>
-            <div class="mb-3">
-                <label for="Description" class="form-label">Description</label>
-                <textarea class="form-control" id="Description" name="Description" rows="3" required></textarea>
-            </div>
-            <div class="mb-3">
-                <label for="SubscribersCount" class="form-label">Subscribers Count</label>
-                <input type="number" class="form-control" id="SubscribersCount" name="SubscribersCount" value="0" required>
-            </div>
-            <div class="mb-3">
-                <label for="URL" class="form-label">URL</label>
-                <input type="url" class="form-control" id="URL" name="URL" required>
-            </div>
-            <button type="submit" class="btn btn-primary">Add</button>
+            <x-form-input 
+                type="text" 
+                name="ChannelName" 
+                label="Channel Name" 
+                :value="''" 
+                required="true" 
+            />
+            <x-form-input 
+                type="textarea" 
+                name="Description" 
+                label="Description" 
+                :value="''" 
+                required="true" 
+            />
+            <x-form-input 
+                type="number" 
+                name="SubscribersCount" 
+                label="Subscribers Count" 
+                :value="0" 
+                required="true" 
+            />
+            <x-form-input 
+                type="url" 
+                name="URL" 
+                label="URL" 
+                :value="''" 
+                required="true" 
+            />
+            <button type="submit" class="btn btn-primary">Add Channel</button>
             <a href="{{ route('channels.index') }}" class="btn btn-secondary">Cancel</a>
         </form>
     </div>
