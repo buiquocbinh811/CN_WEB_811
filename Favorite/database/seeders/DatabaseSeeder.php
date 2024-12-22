@@ -15,10 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call
         (
-            [
-                ComputersTableSeeder::class,
-                IssuesTableSeeder::class
-            ]
+                ChannelsTableSeeder::class,
         );
     }
 }
